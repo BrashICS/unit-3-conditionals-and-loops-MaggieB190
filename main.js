@@ -123,6 +123,7 @@ function mug() {
     alert(`You smash Mr. Brash's R2-D2 mug on his head and it's super effective!`);
     alert(`Mr. Brash collapses on the floor.`);
     alert(`You and your friend flip some tables and stack them ontop. You've won! But now what?...`);
+    ///change that weird line^^^
     alert(`You turn and investgate the electronic Zombie-Brash has smashed. You wonder how he could've gotten zombified...`);
     ///COntinue to have him mumble abt gitbhub, solve his issue story done, brash no zombie
 }

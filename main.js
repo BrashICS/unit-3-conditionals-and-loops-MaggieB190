@@ -13,6 +13,7 @@
 
 //player_name can be used anywhere in the code
 let player_name;
+//
 
 /*** Event Listeners ***/
 
@@ -20,6 +21,8 @@ let player_name;
 document.getElementById("adventure_game_button").addEventListener("click", start_game);
 
 /*** Functions ***/
+
+//Lesson 1: If statements
 
 // A very accurate rounding function
 function round(value, decimals) {
@@ -76,11 +79,10 @@ function ask_name() {
     }
 }
 
-//Part 2
-
-//Halloween Assignment
+//Assignment: Halloween Adventure Game
 
 function start_game() {
+    //player name as set as a global variable above^^
     player_name = prompt("What is your name?");
 
     alert(`Welcome ${player_name} to Haunted St. Matthew High School! I hope you're ready for a terrifing experience...`);
@@ -163,7 +165,7 @@ function go_home_first() {
 //player chose to go home the second time (they left after getting to Mr. Brash's room)
 function go_home_second() {
     alert(`You chickened out and went home. You hope your friend is okay and wonder what Mr. Brash could've been doing. You could swear you saw some kind of liquid seeping under the cracks in his door...`);
-    alert(`You start your computer science homework and spend hours on your project. You finish up for the night and go to commit your changes, but you see the worst has happened...`);
+    alert(`You start your computer scie   nce homework and spend hours on your project. You finish up for the night and go to commit your changes, but you see the worst has happened...`);
     alert(`A merge conflict.`);
     alert(`You try to fix your mistakes but it's no use. All of a sudden your computer sparks, the screen is filled with errors and a mysterious liquid explodes from the inside. The substance seeps into your skin turning it green and burning like fire. You feel yourself go limp. Your vision goes black... It's over. Github has won.`);
 
@@ -195,3 +197,91 @@ function game_over_die() {
         alert(`Thank you for playing ${player_name}. Have a spooky Halloween...`);
     }
 }
+
+//Lesson 2: else-if statements
+
+//Part 1
+
+// Setup the menu
+function menu() {
+let message = `Hi! Please make a selection:
+1 - Play
+2 - Options
+3 - DLC
+4 - Check for Updates
+5 - Exit
+`
+// Prompt with the menu
+let selection = Number(prompt(message));
+
+    if (selection == 1) {
+        let difficulty = Number(prompt(`What difficulty would you like to play at?
+            1 - Easy
+            2 - Medium
+            3 - Hard`));
+
+        console.log(`Let's Play!`);
+
+        if (difficulty == 1) {
+            console.log(`You selected easy mode`);
+        }
+        else if (difficulty == 2) {
+            console.log(`You selected medium mode`);
+        }
+        else if (difficulty == 3) {
+            console.log(`You selected hard mode`);
+        } 
+    }
+    else if (selection == 2) {
+        console.log(`You selected Options`);
+    }
+    else if (selection == 3) {
+        console.log(`No new DLC at this time`);
+    }
+    else if (selection == 4) {
+        console.log(`Everything is up to date`);
+    }
+    else if (selection == 5) {
+        console.log(`Bye!`);
+    }
+}
+//^^ This was the function for menu
+
+//Part 2 AND and OR
+
+function greeting(hour) {
+    //hour is in military time
+    if ((hour >= 0) && (hour <= 11)) {
+        //hour from 0 to 11
+        console.log("Good morning! Rise and shine"`);
+    }
+    else if ((hour >= 12) && (hour <= 17)) {
+        console.log("Good afternoon"`);
+    }
+    else if ((hour >= 18) && (hour <= 23)) {
+        console.log("Good evening!");
+    }
+    else if ((hour < 0) || (hour > 23)) {
+        return ("Invalid hour!");
+}
+}
+
+// Optional challenge
+
+function two_digit() {
+    let digit = randInt(0, 10);
+    console.log(digit)
+
+    if (digit % 2 == 0) {
+        return ("Even")
+    }
+    else if (digit % 2 != 0) {
+        return ("Odd")
+    }
+    
+    if (digit == 0) {
+        return ("0")
+    }
+}
+
+

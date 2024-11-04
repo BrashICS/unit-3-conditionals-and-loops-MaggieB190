@@ -269,18 +269,17 @@ function greeting(hour) {
 // Optional challenge
 
 function two_digit() {
-    let digit = randInt(0, 10);
+    let digit = randInt(0, 5);
     console.log(digit)
 
+    if (digit == 0) {
+        return ("0")
+    }
     if (digit % 2 == 0) {
         return ("Even")
     }
     else if (digit % 2 != 0) {
         return ("Odd")
-    }
-    
-    if (digit == 0) {
-        return ("0")
     }
 }
 

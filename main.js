@@ -220,29 +220,29 @@ let selection = Number(prompt(message));
             2 - Medium
             3 - Hard`));
 
-        console.log(`Let's Play!`);
+        alert(`Let's Play!`);
 
         if (difficulty == 1) {
-            console.log(`You selected easy mode`);
+            alert(`You selected the easy route.`);
         }
         else if (difficulty == 2) {
-            console.log(`You selected medium mode`);
+            alert(`Most people select medium.`);
         }
         else if (difficulty == 3) {
-            console.log(`You selected hard mode`);
+            alert(`I see you like a challenge!`);
         } 
     }
     else if (selection == 2) {
-        console.log(`You selected Options`);
+        alert(`You selected Options`);
     }
     else if (selection == 3) {
-        console.log(`No new DLC at this time`);
+        alert(`No new DLC at this time`);
     }
     else if (selection == 4) {
-        console.log(`Everything is up to date`);
+        alert(`Everything is up to date`);
     }
     else if (selection == 5) {
-        console.log(`Bye!`);
+        alert(`Bye!`);
     }
 }
 //^^ This was the function for menu
@@ -253,10 +253,10 @@ function greeting(hour) {
     //hour is in military time
     if ((hour >= 0) && (hour <= 11)) {
         //hour from 0 to 11
-        console.log("Good morning! Rise and shine"`);
+        console.log("Good morning! Rise and shine");
     }
     else if ((hour >= 12) && (hour <= 17)) {
-        console.log("Good afternoon"`);
+        console.log("Good afternoon");
     }
     else if ((hour >= 18) && (hour <= 23)) {
         console.log("Good evening!");

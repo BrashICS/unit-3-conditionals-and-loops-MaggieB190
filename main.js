@@ -81,6 +81,8 @@ function ask_name() {
     }
 }
 
+
+
 //Assignment: Halloween Adventure Game
 
 function start_game() {
@@ -333,8 +335,33 @@ function which_day(n) {
 //Part 3
 
 function guess_10() {
-    
     //make the user input a number thats a guess for the hidden random number generated ^^
+    let rnd_guess_10 = Number(randInt(1, 10)); 
+
+    let user_guess_10 = +prompt(`A random number from 1-10 has been generated, take a guess as to what it is!
+    Enter your guess:`);
+
+    //user was correct
+    if (user_guess_10 == rnd_guess_10) {
+        let continue_guess_game = prompt(`That's correct! The random number was ${rnd_guess_10}. Enter (1) to play again, or (2) to quit.`);
+            if (continue_guess_game == 1) {
+                guess_10();
+            }
+    }
+    //user out of range
+    else if ((user_guess_10 > 10) || (user_guess_10 < 1)) {
+        alert(`Your guess was out of the required range (1-10). The random number was ${rnd_guess_10}`);
+    }
+    else if (user_guess_10 < rnd_guess_10) {
+        alert(`Ha ha! Too low! The random number was ${rnd_guess_10}`);
+    }
+    else if (user_guess_10 > rnd_guess_10) {
+        alert(`Too high! The random number was ${rnd_guess_10}`);
+    }
+    //if they mess things up somehow
+    else {
+        alert(`There was an error. Try again.`);
+    }
 }
 
 

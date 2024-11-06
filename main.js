@@ -20,6 +20,8 @@ let player_name;
 //button is the html id, click is what to listen for and start game is what function to go to when clicked
 document.getElementById("adventure_game_button").addEventListener("click", start_game);
 
+document.getElementById("guess").addEventListener("click", guess_10);
+
 /*** Functions ***/
 
 //Lesson 1: If statements
@@ -281,6 +283,58 @@ function two_digit() {
     else if (digit % 2 != 0) {
         return ("Odd")
     }
+}
+
+
+//Lesson 3: Else statements
+// else is for complete end of if, it is if nothing works, do this (catch all)
+
+//part 1
+
+function is_number(num) {
+    if (typeof num == "number") {
+        return (`true`);
+    }
+    else {
+        return (`false`);
+    }
+}
+
+//Part 2
+
+function which_day(n) {
+    is_number(n)
+    if (n == 1) {
+        return ("Monday");
+    }
+    else if (n == 2) {
+        return ("Tuesday");
+    }
+    else if (n == 3) {
+        return ("Wednesday");
+    }
+    else if (n == 4) {
+        return ("Thursday");
+    }
+    else if (n == 5) {
+        return ("Friday");
+    }
+    else if (n == 6) {
+        return ("Saturday");
+    }
+    else if (n == 7) {
+        return (`Sunday`);
+    }
+    else {
+        return (`Invalid type`);
+    }
+}
+
+//Part 3
+
+function guess_10() {
+    
+    //make the user input a number thats a guess for the hidden random number generated ^^
 }
 
 

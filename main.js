@@ -24,7 +24,7 @@ document.getElementById("guess").addEventListener("click", guess_10);
 
 /*** Functions ***/
 
-//Lesson 1: If statements
+//Lesson 3.1: If statements
 
 // A very accurate rounding function
 function round(value, decimals) {
@@ -202,7 +202,7 @@ function game_over_die() {
     }
 }
 
-//Lesson 2: else-if statements
+//Lesson 3.2: else-if statements
 
 //Part 1
 
@@ -288,7 +288,7 @@ function two_digit() {
 }
 
 
-//Lesson 3: Else statements
+//Lesson 3.3: Else statements
 // else is for complete end of if, it is if nothing works, do this (catch all)
 
 //part 1
@@ -361,6 +361,42 @@ function guess_10() {
     //if they mess things up somehow
     else {
         alert(`There was an error. Try again.`);
+    }
+}
+
+//Lesson 3.4 While loop
+//Practice
+
+//part 1 countdown
+function countdown(start, stop) {
+    let attempts = 0;
+    if (start < stop) {
+        return -1
+    }
+    while (start >= stop ) {
+        console.log(start);
+        //this is the same as start = start - 1
+        start--;
+        attempts++;
+    }
+    //need to make this return how many times it loops
+    return (attempts)
+}
+
+//Part 2 random until stop
+function random_until(min, max, stop) {
+    let rnd_number_until = randInt(min, max)
+    if (min > max) {
+        return -1
+    }
+    else if ((stop >= max) || (stop <= min)) {
+        return -1
+    }
+    while (rnd_number_until != stop) {
+        console.log(rnd_number_until);
+        if (rnd_number_until == stop) {
+            return stop
+        }
     }
 }
 

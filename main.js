@@ -421,4 +421,13 @@ function average(n) {
     console.log(`The average is ${avg}`);
 }
 
+//Lesson 3.5: interlude strings
+//last character in a string is always length - 1
+// [ short for @, character at that location in the string
 
+//part 1: print reverse
+
+function print_reverse(str) {
+    let reverse_str = str.reverse();
+    console.log(reverse_str);
+}

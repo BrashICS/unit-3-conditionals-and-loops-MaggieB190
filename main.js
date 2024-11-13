@@ -385,19 +385,40 @@ function countdown(start, stop) {
 
 //Part 2 random until stop
 function random_until(min, max, stop) {
-    let rnd_number_until = randInt(min, max)
-    if (min > max) {
+    let rnd_num_until = randInt(min, max)
+    //if min bigger, infinite loop
+    if (max <= min) {
         return -1
     }
-    else if ((stop >= max) || (stop <= min)) {
+    //if never stops, infinite loop
+    if ((stop > max) || (stop < min)) {
         return -1
     }
-    while (rnd_number_until != stop) {
-        console.log(rnd_number_until);
-        if (rnd_number_until == stop) {
-            return stop
-        }
+
+    while (rnd_num_until != stop) {
+        //if its not the stop value, print and pick another
+        console.log(rnd_num_until);
+        rnd_num_until = randInt(min, max);
     }
+    return stop;
+}
+
+//Part 3 average
+
+function average(n) {
+    let avg = 0;
+    let count = 1;
+
+    while (count <= n) {
+        //+= is adding to a variable, avg = avg + Number(prompt...
+        avg +=  +prompt(`Please neter value ${count}/${n}`);
+        //same as count +=
+        count++;
+    }
+
+    //uses round function from earlier
+    avg = round(avg/n, 1);
+    console.log(`The average is ${avg}`);
 }
 
 

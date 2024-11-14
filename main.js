@@ -449,6 +449,7 @@ function print_reverse(str) {
     while (i >= 0) {
         // add one letter to the output string, ++ is add 1
         output += str[i]
+        //by subtracting, its working backwards, thus reversing
         i--;
     }
     console.log(output);
@@ -469,6 +470,7 @@ function dragons_and_goblins(str) {
         else if (str[letter_look] == "g") {
             goblin_count++;
         }
+        //at the end of each loop, increase it by 1, to look at the next letter
         letter_look++;
     }
     console.log(`Dragons: ${dragon_count} Goblins: ${goblin_count}`);

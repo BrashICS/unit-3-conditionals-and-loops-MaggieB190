@@ -425,9 +425,63 @@ function average(n) {
 //last character in a string is always length - 1
 // [ short for @, character at that location in the string
 
-//part 1: print reverse
+function find_char(str) {
+    let letter_char = str[str.length - 9];
+    console.log(letter_char);
+}
 
+function print_every_letter(str) {
+    let current_letter = 0;
+    
+    while (current_letter < str.length) {
+      console.log(str[current_letter]);
+      current_letter++;
+    }
+}
+
+//part 1: print reverse
 function print_reverse(str) {
-    let reverse_str = str.reverse();
-    console.log(reverse_str);
+    //start with blank string to build up the letters
+    let output = "";
+
+    //start one after the end of the string
+    let i = str.length - 1
+    while (i >= 0) {
+        // add one letter to the output string, ++ is add 1
+        output += str[i]
+        i--;
+    }
+    console.log(output);
+}
+
+//part 2: goblins and dragons
+
+function dragons_and_goblins(str) {
+    let letter_look = 0;
+    let dragon_count = 0;
+    let goblin_count = 0;
+
+    //make sure the letter it is on is les than the string length
+    while (letter_look < str.length) {
+        if (str[letter_look] == "d") {
+            dragon_count++;
+        }
+        else if (str[letter_look] == "g") {
+            goblin_count++;
+        }
+        letter_look++;
+    }
+    console.log(`Dragons: ${dragon_count} Goblins: ${goblin_count}`);
+}
+
+//part 3: 
+
+function add(str) {
+    let current_number = 0;
+    let convert_str = Number(str);
+    
+    while (current_number < convert_str.length) {
+        console.log(str[current_number]);
+        current_number++;
+    } 
 }

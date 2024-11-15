@@ -522,7 +522,13 @@ function parrot() {
 
     do {
         input_parrot = prompt("Please enter some text or the word 'quit' to exit:");
-        console.log(input_parrot.toUpperCase(), "🦜");
+            //if they enter quit, only print goodbye not QUIT and GOODBYE
+            if (input_parrot.toLowerCase() != "quit") {
+            console.log(input_parrot.toUpperCase(), "🦜");
+            }
+            if (input_parrot.toLowerCase() == "quit") {
+                console.log("GOODBYE 🦜");
+            }
         //to lower case is a function so need to brackets below
     } while (input_parrot.toLowerCase() != "quit");
 }

@@ -411,7 +411,7 @@ function average(n) {
 
     while (count <= n) {
         //+= is adding to a variable, avg = avg + Number(prompt...
-        avg +=  +prompt(`Please neter value ${count}/${n}`);
+        avg +=  +prompt(`Please enter value ${count}/${n}`);
         //same as count +=
         count++;
     }
@@ -523,5 +523,6 @@ function parrot() {
     do {
         input_parrot = prompt("Please enter some text or the word 'quit' to exit:");
         console.log(input_parrot.toUpperCase(), "🦜");
-    } while (input_parrot.toLowerCase != "quit");
+        //to lower case is a function so need to brackets below
+    } while (input_parrot.toLowerCase() != "quit");
 }

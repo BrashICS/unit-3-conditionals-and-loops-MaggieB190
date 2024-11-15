@@ -487,3 +487,41 @@ function add(str) {
         current_number++;
     } 
 }
+
+//Lesson 3.6: Do... While
+
+function print_odd(n) {
+    // n == isNaN wont work, cuz isNaN is a JS function
+    if ((n < 1) || (isNaN(n))) {
+        return;
+    }
+
+    let start_num = 1;
+    do {
+        console.log(start_num);
+        start_num = start_num + 2;
+    } while (n >= start_num)
+   
+    console.log("Hooray!");
+}
+
+function negative_only() {
+    let input_num;
+    
+    do {
+        input_num = +prompt("Please enter a negative number");
+        //make sure it repeats while number is positive (more than 0)
+        //make it check if its a number
+    } while ((input_num >= 0) || isNaN(input_num));
+
+    return input_num;
+}
+
+function parrot() {
+    let input_parrot = "";
+
+    do {
+        input_parrot = prompt("Please enter some text or the word 'quit' to exit:");
+        console.log(input_parrot.toUpperCase(), "🦜");
+    } while (input_parrot.toLowerCase != "quit");
+}

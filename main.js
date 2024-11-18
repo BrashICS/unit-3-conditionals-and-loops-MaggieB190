@@ -499,9 +499,10 @@ function print_odd(n) {
     let start_num = 1;
     do {
         console.log(start_num);
+        //you can also do start_num += 2
         start_num = start_num + 2;
     } while (n >= start_num)
-   
+        
     console.log("Hooray!");
 }
 
@@ -531,4 +532,42 @@ function parrot() {
             }
         //to lower case is a function so need to brackets below
     } while (input_parrot.toLowerCase() != "quit");
+}
+
+//Lesson 3.7: For Loops
+
+/** 
+ * for (part1; part2; part3) {
+ * part1 declaration of variable (increasing/decreasing)
+ * part2 while condition
+ * part 3 what happens on each loop
+**/
+
+//Part 1 practice
+function count_up(start, stop) {
+    for (let num_counted = start; num_counted <= stop; num_counted++) {
+        console.log(num_counted);
+    }
+}
+
+function count_down(start, stop) {
+    for (let num_counted = start; num_counted >= stop; num_counted--) {
+        console.log(num_counted);
+    }
+}
+
+function print_chars(str, step) {
+    for (let print_letter; print_letter <= str.length; print_letter++) {
+        console.log(str);
+        console.log(str[print_letter])
+    }
+}
+
+function print_every_letter(str) {
+    let current_letter = 0;
+    
+    while (current_letter < str.length) {
+      console.log(str[current_letter]);
+      current_letter++;
+    }
 }

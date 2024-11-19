@@ -557,13 +557,28 @@ function count_down(start, stop) {
 }
 
 function print_chars(str, step) {
-    for (let print_letter; print_letter <= str.length; print_letter++) {
-        console.log(str);
-        console.log(str[print_letter])
+    // dont make it <= cuz then itll say undefined when it gets to the last in the string
+    // have it add the letter it prints to step
+    for (let print_letter = 0; print_letter < str.length; print_letter+= step) {
+        console.log(str[print_letter]);
     }
 }
 
-function print_every_letter(str) {
+//Part 2 practice
+function sum(n) {
+    let final_num;
+    for (let adding_num = 0; n >= adding_num; adding_num++) {
+        console.log(adding_num);
+        console.log(adding_num[n]);
+        final_num = adding_num
+    }
+    return (final_num);
+}
+
+/**
+ * reference
+ * 
+ * function print_every_letter(str) {
     let current_letter = 0;
     
     while (current_letter < str.length) {
@@ -571,3 +586,10 @@ function print_every_letter(str) {
       current_letter++;
     }
 }
+
+function count_up(start, stop) {
+    for (let num_counted = start; num_counted <= stop; num_counted++) {
+        console.log(num_counted);
+    }
+}
+ */

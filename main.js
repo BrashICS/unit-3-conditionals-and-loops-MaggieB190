@@ -566,30 +566,44 @@ function print_chars(str, step) {
 
 //Part 2 practice
 function sum(n) {
-    let final_num;
-    for (let adding_num = 0; n >= adding_num; adding_num++) {
+    let final_num = 0;
+    for (let adding_num = 1; n >= adding_num; adding_num++) {
         console.log(adding_num);
-        console.log(adding_num[n]);
-        final_num = adding_num
+        //each time loop is repeated, it will add my adding_num/values to the final sum
+        final_num += adding_num;
     }
     return (final_num);
+}
+
+function count4(begin, end) {
+    //value that will test if divisible by 4
+    let count4_test;
+    let counted_divisible4 = 0;
+    // will return how many numbers are divisible by 4 from begin to end
+    for (counted_divisible4; begin < end; counted_divisible4++) {
+        if (count4_test % 4 == 0) {
+            return ("good");
+        }
+    }
+    console.log("hello");
+    return counted_divisible4;
 }
 
 /**
  * reference
  * 
- * function print_every_letter(str) {
-    let current_letter = 0;
-    
-    while (current_letter < str.length) {
-      console.log(str[current_letter]);
-      current_letter++;
-    }
-}
+ * function two_digit() {
+    let digit = randInt(0, 5);
+    console.log(digit)
 
-function count_up(start, stop) {
-    for (let num_counted = start; num_counted <= stop; num_counted++) {
-        console.log(num_counted);
+    if (digit == 0) {
+        return ("0")
+    }
+    if (digit % 2 == 0) {
+        return ("Even")
+    }
+    else if (digit % 2 != 0) {
+        return ("Odd")
     }
 }
  */

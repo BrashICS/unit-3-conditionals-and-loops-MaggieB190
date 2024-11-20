@@ -577,33 +577,21 @@ function sum(n) {
 
 function count4(begin, end) {
     //value that will test if divisible by 4
-    let count4_test;
-    let counted_divisible4 = 0;
+    let count4_test = 0
     // will return how many numbers are divisible by 4 from begin to end
-    for (counted_divisible4; begin < end; counted_divisible4++) {
-        if (count4_test % 4 == 0) {
-            return ("good");
+    for (let counted_divisible4 = begin; counted_divisible4 <= end; counted_divisible4++) {
+        if (counted_divisible4 % 4 == 0) {
+            count4_test ++
+        }
+    }  return (count4_test)
+}
+
+function sum_divisible(n, x) {
+    let count_sum;
+    for (let int = n; int <= end; int + x) {
+        if (int % x == 0) {
+            count_sum += int
         }
     }
-    console.log("hello");
-    return counted_divisible4;
+    return (count_sum)
 }
-
-/**
- * reference
- * 
- * function two_digit() {
-    let digit = randInt(0, 5);
-    console.log(digit)
-
-    if (digit == 0) {
-        return ("0")
-    }
-    if (digit % 2 == 0) {
-        return ("Even")
-    }
-    else if (digit % 2 != 0) {
-        return ("Odd")
-    }
-}
- */

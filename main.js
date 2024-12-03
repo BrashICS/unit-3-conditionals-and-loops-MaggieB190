@@ -595,3 +595,24 @@ function sum_divisible(n, x) {
     }
     return (count_sum)
 }
+
+
+//recap of friday what i missed
+
+//randInt (already have way above so dont worry abt copy pasting to here)
+
+//sleep the js interpreter for some value of ms
+//this function will be given
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+//takes in a string of as and za to potentially kill zombies
+function hero3(arrows, enemies) {
+    for (let i = 0; i < enemies.length; i++) {
+        if (live_or_die(arrows, enemies[i]))
+            arrows -= enemies[i];
+        else
+            return false;
+    }
+}
